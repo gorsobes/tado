@@ -22,11 +22,14 @@ if(checked){
 
 };
 const handleChangeG = (id) => {
-  setTodos([
-    ...todos.map((task) =>
-      task.id === id ? { ...task, check: !task.check } : { ...task }
-    )
-  ]);
+  if(!checked){
+    setTodos([
+      ...todos.map((task) =>
+        task.id === id ? { ...task, check: !task.check } : { ...task }
+      )
+    ]);
+  }
+ 
 };
 
  let addCss = () => {
